@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styling.css">
+    <title>Team NUMB Prototype</title>
+</head>
+
+<body>
+    <div id="main">
+        <script src="calendar.js"></script>
+        <div id="title">
+            <img src='logo_white.gif' width='400px'>
+            <span id='title-text'> | Team NUMB</span>
+            <span id='links'><a href="map_page.html" id="whiteLink">Map</a> - <span id="purpleLink" style='color: #9380B6;'>Calendar</span></span>
+        </div>
+        
+        <div id="wrapper">
+            <div id="map">
+                <span class='title'>Upcoming Events</span>
+                
+                <div class='date-header cd1 cd5'>Thursday, February 25</div>
+                <div class='event' onclick="event_info('1')">
+                    <span class='event-time' id="time1">5:00</span>
+                    <span class='event-name' id="ct1">Mental Health Workshop</span>
+                    <span class='event-loc' id="cl1">Searle 3-220</span>
+                </div>
+                <div class='event' onclick="event_info('5')">
+                    <span class='event-time' id="time5">6:00</span>
+                    <span class='event-name' id="ct5">Rainbow: General Meeting</span>
+                    <span class='event-loc' id="cl5">Locy 314</span>
+                </div>
+                
+                <div class='date-header cd2'>Friday, February 26</div>
+                <div class='event' onclick="event_info('2')">
+                    <span class='event-time' id="time2">4:00</span>
+                    <span class='event-name' id="ct2">Guest Lecture: Science and Society</span>
+                    <span class='event-loc' id="cl2">Harris 107</span>
+                </div>
+            
+                <div class='date-header cd3'>Saturday, February 27</div>
+                <div class='event' onclick="event_info('3')">
+                    <span class='event-time' id="time3">7:00</span>
+                    <span class='event-name' id="ct3">Panel on the Black Student-Athlete Experience</span>
+                    <span class='event-loc' id="cl3">Harris L07</span>
+                </div>
+                
+                <div class='date-header cd4'>Sunday, February 28</div>
+                <div class='event' onclick="event_info('4')">
+                    <span class='event-time' id="time4">8:00</span>
+                    <span class='event-name' id="ct4">Candlelight Vigil</span>
+                    <span class='event-loc' id="cl4">The Rock</span>
+                </div>
+            
+            </div>
+        </div>
+            
+            
+        <div id="sidebar">
+            <div id = "event_space" class='sidebar_wrapper'>
+                <div id = "event_header"><b>Event Information</b></div>
+                <div id = "event_name"><b></b></div>
+                <div id = "event_date"><b></b></div>
+                <div id = "event_time"><b></b></div>
+                <div id = "event_location"><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Click on an event for more information!</b></div>
+                <div id = "event_description"><b></b></div>
+                <div id = "event_sponsor"><b></b></div>
+                <button id = "cal_sync" onclick="sync_alert()">Sync to Google Calendar</button>
+            </div>
+            
+            <div id="filter_form" class='sidebar_wrapper'>
+                <div id='event_header'>Search and Filter</div>
+                <form>
+                    <input type='text' name='search' placeholder='Search by name ...'><br>
+                
+                    <table id='filter-table'>
+                        <tr>
+                            <td><input type="checkbox" name="type1" value="Activism"> Activism<br></td>
+                            <td><input type="checkbox" name="type2" value="Cultural"> Cultural<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type3" value="Education"> Education<br></td>
+                            <td><input type="checkbox" name="type4" value="Philanthropy"> Philanthropy<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type5" value="Social"> Social<br></td>
+                            <td><input type="checkbox" name="type6" value="Wellness"> Wellness<br></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+                
+            <div id='new_event_wrapper' class='sidebar_wrapper'>
+                <button id="new_event" onclick="new_clicked()">+ Add New Event</button>
+            </div>
+        </div>
+        
+       <div id="creation_sidebar">
+            <div id = "event_creation_space" class='creation_sidebar_wrapper'>
+                <form>
+                    <div id="event_creation_header"><b>Enter Event Information</b></div>
+                    
+                    <div id="event_creation_name"><input type="text" class="creation_field" placeholder="Name..."></div>
+                    <div id="event_creation_date"><input type="text" class="creation_field" placeholder="Date..."></div>
+                    <div id="event_creation_time"><input type="text" class="creation_field" placeholder="Time..."></div>
+                    <div id="event_creation_location"><input type="text" class="creation_field" placeholder="Location..."></div>
+                    <div id="event_creation_description"><input type="text" class="creation_field" placeholder="Description..."></div>
+                    <div id="event_creation_sponsor"><input type="text" class="creation_field" placeholder="Sponsor..."></div>
+                </form>
+            </div>
+            
+            <div id="filter_form" class='creation_sidebar_wrapper'>
+                <div id='event_creation_header'>Select Categories</div>
+                <form>
+                    <table id='filter-table'>
+                        <tr>
+                            <td><input type="checkbox" name="type1" value="Activism"> Activism<br></td>
+                            <td><input type="checkbox" name="type2" value="Cultural"> Cultural<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type3" value="Education"> Education<br></td>
+                            <td><input type="checkbox" name="type4" value="Philanthropy"> Philanthropy<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type5" value="Social"> Social<br></td>
+                            <td><input type="checkbox" name="type6" value="Wellness"> Wellness<br></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+            <div id='new_event_wrapper' class='sidebar_wrapper'>
+                <button id="submit_event" onclick="submit_clicked()">Submit Event</button>
+            </div>
+        </div>
+        
+    </div>
+    </div> 
+</body>
+
+</html>

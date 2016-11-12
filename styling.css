@@ -1,0 +1,323 @@
+body {
+    font-family: 'Century Gothic', sans-serif;
+}
+
+#main {
+    width: 98.5vw;
+    height: 95vh;
+}
+
+/* Title bar elements */
+
+#title {
+    background-color: #4E2A84;
+    height: 80px;
+    margin-left: -10px;
+    margin-top: -10px;
+    clear: left;
+    
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+#title.img {
+    position: absolute;
+    left: 10px;
+}
+
+#title-text {
+    font-size: 50px;
+    font-family: 'Campton', 'Century Gothic', sans-serif;
+    position: absolute;
+    left: 450px;
+    color: white;
+}
+
+#links {
+    font-size: 50px;
+    margin-right: 40px;
+    position: relative;
+    color: white;
+    float: right;
+}
+#purpleLink{
+    border-bottom-style: solid;
+    border-color: #9380B6;
+}
+#whiteLink{
+    border-bottom-style: solid;
+    border-color: white;
+}
+
+a { color: inherit; text-decoration: inherit; }
+
+/* Main body elements */
+
+#wrapper {
+    position: relative;
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 93%;
+}
+
+#sidebar {
+    position: relative;
+    float: right;
+    width: 29%;
+    height: 100%;
+    display: initial;
+}
+
+#creation_sidebar {
+    float: right;
+    width: 29%;
+    height: 100%;
+    display: none;
+}
+
+.butn-text{
+    position: relative;
+    text-align: center;
+}
+
+/* Elements in agenda view of the calendar */
+
+.title {
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: 2%;
+    margin-top: 4%;
+}
+
+.date-header {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0.2em;
+    margin-left: 2%;
+}
+
+.event {
+    width: 80%;
+    height: 2em;
+    font-size: 1.2em;
+    margin-left: 2%;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.event-time {
+    font-weight: bold;
+    color: #5B3B8C;
+    position: relative;
+    left: 4%;
+}
+
+.event-name {
+    position: relative;
+    left: 5%;
+}    
+
+.event-loc {
+    font-style: italic;
+    position: relative;
+    float: right;
+}
+
+.box-event {
+    width: 85%;
+    height: 100%;
+    margin-left: 2%;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.box-event-time {
+    font-weight: bold;
+    display: inline;
+    color: #5B3B8C;
+}
+
+.box-event-name {
+    display: inline-block;
+}    
+
+.box-event-loc {
+    display: inline-block;
+}
+
+/* General sidebar elements */
+
+.sidebar_wrapper {    
+    position: relative;
+    width: 99%;
+    height: 43.5%;
+    background-color: #CCC4DF;
+    outline: solid;
+    outline-color: #4E2A84;
+}
+
+.creation_sidebar_wrapper {    
+    position: relative;
+    width: 99%;
+    height: 43.5%;
+    background-color: #CCC4DF;
+    outline: solid;
+    outline-color: #4E2A84;
+}
+
+#new_event_wrapper {
+    height: 5%;
+}
+
+button {
+    position: relative;
+    width: 80%;
+    height: 10%;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 10%;
+    color: #4E2A84;
+}
+
+#new_event {
+    height: 80%;
+    margin-top: 1%;
+}
+#submit_event {
+    height: 80%;
+    margin-top: 1%;
+}
+
+/* Event info (top right) elemnts */
+
+#event_header{
+    width: 100%;
+    height: 7%;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    /* border-bottom: solid;
+    border-color: #4E2A84; */
+    
+    text-align: center;
+    font-weight: bolder;
+}
+
+#event_name{
+    float: left;
+    width: 100%;
+    height: 10%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#event_date{
+    float:left;
+    width: 100%;
+    height: 6%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#event_time{
+    float:left;
+    width: 100%;
+    height: 6%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#event_location{
+    float: left;
+    width: 100%;
+    height: 6%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#event_description{
+    float: left;
+    width: 100%;
+    height: 25%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+#event_sponsor{
+    float: left;
+    width: 100%;
+    height: 14%;
+    margin-top: 1.5%;
+    padding-left: 10px;
+    text-align: left;
+}
+
+/* Event creation elements */
+
+#event_creation_header{
+    width: 100%;
+    height: 7%;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    border-bottom: solid;
+    border-color: #4E2A84;
+    
+    text-align: center;
+    font-weight: bolder;
+}
+
+input.creation_field {
+    float: left;
+    width: 80%;
+    margin-left: 9%;
+    
+    padding-left: 10px;
+    margin-top: 3%;
+    
+    font-size: 1.3em;
+    text-align: left;
+}
+
+/* Filter elements */
+
+.filter {
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 2%;
+    line-height: 1.5em;
+    margin-left: 10px;
+}
+
+table {
+    margin-left: 5%;
+    width: 90%;
+    height: 60%;
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+
+input[name = "search"] {
+    height: 50px;
+    font-size: 1.5em;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+input[type = "checkbox"] {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    transform: scale(1.3);
+}
+

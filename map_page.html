@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+    <script src="calendar.js"></script>
+    <script src="map.js"></script>
+    
+    <div id="main">
+        <div id="title">
+            <img src='logo_white.gif' width='400px'> 
+            <span id='title-text'> | Team NUMB</span> 
+            <span id='links'><span id="purpleLink" style='color: #9380B6;'>Map</span> - <a href="calendar_page.html" id="whiteLink">Calendar</a></span>
+        </div>
+        
+        <div id="wrapper">
+            <div id="map"></div>
+        </div>
+    
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq1GrvoxKJMqB-rotjrqM_0fd9e7_JPPU&signed_in=true&callback=initMap">
+        </script>
+    
+        
+        <div id="sidebar">
+            <div id = "event_space" class='sidebar_wrapper'>
+                <div id = "event_header"><b>Event Information</b></div>
+                <div id = "event_name"><b></b></div>
+                <div id = "event_date"><b></b></div>
+                <div id = "event_time"><b></b></div>
+                <div id = "event_location"><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Click on a pin for more information!</b></div>
+                <div id = "event_description"><b></b></div>
+                <div id = "event_sponsor"><b></b></div>
+                <button id = "cal_sync" onclick="sync_alert()">Sync to Google Calendar</button>
+            </div>
+            
+            <div id="filter_form" class='sidebar_wrapper'>
+                <div id='event_header'>Search and Filter</div>
+                <form>
+                    <input type='text' name='search' placeholder='Search by name ...'><br>
+                
+                    <table id='filter-table'>
+                        <tr>
+                            <td><input type="checkbox" name="type1" value="Activism"> Activism<br></td>
+                            <td><input type="checkbox" name="type2" value="Cultural"> Cultural<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type3" value="Education"> Education<br></td>
+                            <td><input type="checkbox" name="type4" value="Philanthropy"> Philanthropy<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type5" value="Social"> Social<br></td>
+                            <td><input type="checkbox" name="type6" value="Wellness"> Wellness<br></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+                
+            <div id='new_event_wrapper' class='sidebar_wrapper'>
+                <button id="new_event" onclick="new_clicked()">+ Add New Event</button>
+            </div>
+        </div>
+        
+        
+        <div id="creation_sidebar">
+            <div id = "event_creation_space" class='creation_sidebar_wrapper'>
+                <form>
+                    <div id="event_creation_header"><b>Enter Event Information</b></div>
+                    
+                    <div id="event_creation_name"><input type="text" class="creation_field" placeholder="Name..."></div>
+                    <div id="event_creation_date"><input type="text" class="creation_field" placeholder="Date..."></div>
+                    <div id="event_creation_time"><input type="text" class="creation_field" placeholder="Time..."></div>
+                    <div id="event_creation_location"><input type="text" class="creation_field" placeholder="Location..."></div>
+                    <div id="event_creation_description"><input type="text" class="creation_field" placeholder="Description..."></div>
+                    <div id="event_creation_sponsor"><input type="text" class="creation_field" placeholder="Sponsor..."></div>
+                </form>
+            </div>
+            
+            <div id="filter_form" class='creation_sidebar_wrapper'>
+                <div id='event_creation_header'>Select Categories</div>
+                <form>
+                    <table id='filter-table'>
+                        <tr>
+                            <td><input type="checkbox" name="type1" value="Activism"> Activism<br></td>
+                            <td><input type="checkbox" name="type2" value="Cultural"> Cultural<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type3" value="Education"> Education<br></td>
+                            <td><input type="checkbox" name="type4" value="Philanthropy"> Philanthropy<br></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="type5" value="Social"> Social<br></td>
+                            <td><input type="checkbox" name="type6" value="Wellness"> Wellness<br></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+            <div id='new_event_wrapper' class='sidebar_wrapper'>
+                <button id="submit_event" onclick="submit_clicked()">Submit Event</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
